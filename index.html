@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi portafolio - KeXel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">kexel<span class="dot">.</span></span>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">sobre mí</a></li>
+      <li><a href="#lenguajes">lenguajes</a></li>
+      <li><a href="#experiencia">experiencia</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-left">
+      <p class="hero-pre">hola, me llamo</p>
+      <h1>Kirian <span class="alias">KeXel</span></h1>
+      <p class="hero-sub">Desarrollador · 15 años</p>
+      <p class="hero-desc">
+        Llevo varios años aprendiendo a programar, he tenido ayuda de amigos programadores. Me gusta hacer webs funcionales al 100%.
+      </p>
+      <div class="hero-btns">
+        <a href="#lenguajes" class="btn-main">Ver habilidades</a>
+        <a href="#experiencia" class="btn-ghost">Mi progreso</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-wrap">
+        <img src="https://i.ibb.co/BHXk3xBJ/imagen-2026-02-24-212820945-Photoroom-Photoroom.jpg" alt="Foto de Kirian" class="hero-photo" />
+      </div>
+      <div class="code-card">
+        <div class="code-bar">
+          <span class="cb r"></span><span class="cb y"></span><span class="cb g"></span>
+          <span class="code-file">perfil.js</span>
+        </div>
+        <pre><code><span class="c-key">const</span> <span class="c-var">kexel</span> = {
+  nombre: <span class="c-str">"Kirian"</span>,
+  alias:  <span class="c-str">"KeXel"</span>,
+  edad:   <span class="c-num">15</span>,
+  inicios:  <span class="c-str">"Roblox Studio / Lua"</span>,
+  stack: [
+    <span class="c-str">"HTML/CSS/JS"</span>,
+    <span class="c-str">"Python"</span>,
+    <span class="c-str">"Java"</span>,
+    <span class="c-str">"Node.js"</span>,
+    <span class="c-str">"C / C++ / C#"</span>,
+    <span class="c-str">"Lua"</span>
+  ],
+  aprendiendo: <span class="c-bool">true</span>
+};</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi">
+    <div class="section-inner">
+      <h2 class="section-title"><span class="num">01.</span> Sobre mí</h2>
+      <div class="about-text">
+        <p>Me llamo <strong>Kirian</strong>, tengo 15 años y en redes o mi circulo cercano de internet me conocen como <strong>KeXel</strong>. Empecé a programar por roblox y su motor de simulación, me dio curiosidad como se hacian los juegos y la razon del exito de esos juegos.</p>
+        <p>Lo que mas me gusta de programar, sin duda es el resultado y la satisfacion de ver el resultado de tu trabajo.</p>
+        <p>Actualmente estoy reforzando conocimientos en <strong>múltiples lenguajes</strong> al mismo tiempo, con proyectos de mas simples a mas complejos.</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-n">4+</span><span class="stat-l">años programando</span></div>
+          <div class="stat"><span class="stat-n">6</span><span class="stat-l">lenguajes</span></div>
+          <div class="stat"><span class="stat-n">15</span><span class="stat-l">años</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LENGUAJES -->
+  <section id="lenguajes">
+    <div class="section-inner">
+      <h2 class="section-title"><span class="num">02.</span> Lenguajes & tecnologías</h2>
+      <div class="lang-grid">
+        <div class="lang-card" data-level="80">
+          <div class="lang-top"><span class="lang-icon">🌐</span><span class="lang-name">HTML / CSS / JS</span></div>
+          <p class="lang-desc">Base del desarrollo web. Interfaces, animaciones y lógica del lado del cliente.</p>
+          <div class="bar-wrap"><div class="bar"></div></div>
+          <span class="lang-pct">80%</span>
+        </div>
+        <div class="lang-card" data-level="60">
+          <div class="lang-top"><span class="lang-icon">🐍</span><span class="lang-name">Python</span></div>
+          <p class="lang-desc">Scripting, automatización y proyectos de back-end. Versátil y potente.</p>
+          <div class="bar-wrap"><div class="bar"></div></div>
+          <span class="lang-pct">60%</span>
+        </div>
+        <div class="lang-card" data-level="65">
+          <div class="lang-top"><span class="lang-icon">☕</span><span class="lang-name">Java</span></div>
+          <p class="lang-desc">POO sólida, estructuras de datos y aplicaciones robustas.</p>
+          <div class="bar-wrap"><div class="bar"></div></div>
+          <span class="lang-pct">65%</span>
+        </div>
+        <div class="lang-card" data-level="50">
+          <div class="lang-top"><span class="lang-icon">⚙️</span><span class="lang-name">Node.js</span></div>
+          <p class="lang-desc">Back-end en JavaScript, servidores y APIs REST.</p>
+          <div class="bar-wrap"><div class="bar"></div></div>
+          <span class="lang-pct">50%</span>
+        </div>
+        <div class="lang-card" data-level="55">
+          <div class="lang-top"><span class="lang-icon">⚡</span><span class="lang-name">C / C++ / C#</span></div>
+          <p class="lang-desc">Bajo nivel, gestión de memoria y rendimiento extremo.</p>
+          <div class="bar-wrap"><div class="bar"></div></div>
+          <span class="lang-pct">55%</span>
+        </div>
+        <div class="lang-card" data-level="100">
+          <div class="lang-top"><span class="lang-icon">🔧</span><span class="lang-name">Herramientas</span></div>
+          <p class="lang-desc">Git, SQL, Bash y redes. La base que rodea al código.</p>
+          <div class="bar-wrap"><div class="bar"></div></div>
+          <span class="lang-pct">100%</span>
+        </div>
+        <div class="lang-card" data-level="90">
+          <div class="lang-top"><span class="lang-icon">🎮</span><span class="lang-name">Lua / Roblox Studio</span></div>
+          <p class="lang-desc">Donde todo empezó. Scripts en Roblox Studio, lógica de juegos y primeros pasos con la programación orientada a eventos.</p>
+          <div class="bar-wrap"><div class="bar"></div></div>
+          <span class="lang-pct">90%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia">
+    <div class="section-inner">
+      <h2 class="section-title"><span class="num">03.</span> Mi progreso</h2>
+      <div class="graph-wrap">
+        <p class="graph-label">Nivel de habilidad a lo largo del tiempo</p>
+        <div class="graph-container">
+          <div class="graph-y">
+            <span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span>
+          </div>
+          <div class="graph-body">
+            <svg id="chart" viewBox="0 0 460 130" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="lg" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#4f8ef7"/>
+                  <stop offset="100%" stop-color="#a78bfa"/>
+                </linearGradient>
+                <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4f8ef7" stop-opacity="0.18"/>
+                  <stop offset="100%" stop-color="#4f8ef7" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="32" x2="460" y2="32" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <line x1="0" y1="64" x2="460" y2="64" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <line x1="0" y1="96" x2="460" y2="96" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <path id="chartFill" d="" fill="url(#fill)"/>
+              <path id="chartLine" d="" fill="none" stroke="url(#lg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <g id="chartDots"></g>
+            </svg>
+          </div>
+        </div>
+        <div class="graph-x">
+          <span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-year">2021</div>
+          <div class="t-content">
+            <h3>Todo empezó en Roblox</h3>
+            <p>Empeze a buscar videos de como funcionaba roblox studio pero aun no tenia un pc propio, tenia un portatil y mi progreso era lento.</p>
+            <div class="t-tags"><span>Lua</span><span>Roblox Studio</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">2022</div>
+          <div class="t-content">
+            <h3>JavaScript y Phyton</h3>
+            <p>Descubri VS Code y empezé en el desarrollo de mods de minecraft. Tambeien empezé a usar Phyton para hacer bots de discord.</p>
+            <div class="t-tags"><span>JavaScript</span><span>Phyton</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">2023</div>
+          <div class="t-content">
+            <h3>Phyton y Discord</h3>
+            <p>Me meti de lleno en la programación con phyton y los sitemas bash de discord, que para ese entonces era algo tedioso para mi.</p>
+            <div class="t-tags"><span>Python</span><span>Discord</span><span>APIs</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">2024</div>
+          <div class="t-content">
+            <h3>Java y HTML</h3>
+            <p>Inaguré Cat Studio, un estudio de minecraft enfocado en el desarrollo de eventos  de minecraft estilo Eufonia Studio, yo junto a desarrolladores de mi estudio programabamos con java. Tambien emepece con HTML y CSS para hacer mi primera web para dicho estudio. </p>
+            <div class="t-tags"><span>Java</span><span>HTML</span><span>CSS</span></div>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">2025</div>
+          <div class="t-content">
+            <h3>Consolidación y crecimiento</h3>
+            <p>Unificando todo lo aprendido. Tres nuevos lenguajes aprendidos,  C/ C++ / C#. Mi mejor epoca como programador. Utilización de Git hub y su terminal.</p>
+            <div class="t-tags"><span>Terminal</span><span>Git</span><span>C/ C++ / C#</span></div>
+          </div>
+        </div>
+                <div class="t-item">
+          <div class="t-year">2026</div>
+          <div class="t-content">
+            <h3>Consolidación y crecimiento</h3>
+            <p>Unificando todo lo aprendido. Tres nuevos lenguajes aprendidos,  C/ C++ / C#. Mi mejor epoca como programador. Actualmente estoy volviendo a la programación con LUA, para ponerme al dia con todo lo relacionado con este lenguanje.El resto de lenguajes los uso de vez en cuando depende de el proyecto que quiera realizar</p>
+            <div class="t-tags"><span>LUA</span><span>HTML</span><span>Phyton</span><span>Java</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">kexel<span class="dot">.</span></span>
+    <span class="footer-copy">© 2026 KeXel. Todos los derechos reservados.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
