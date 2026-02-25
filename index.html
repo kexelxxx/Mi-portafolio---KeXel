@@ -5,9 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi portafolio - KeXel</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== MOBILE WARNING ===== */
+    #mobile-warning {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: var(--bg);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    #mobile-warning.show { display: flex; }
+    .mw-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 28px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .mw-icon { font-size: 3rem; line-height: 1; }
+    .mw-title { font-size: 1.3rem; font-weight: 600; color: var(--white); line-height: 1.3; }
+    .mw-desc { font-size: 0.88rem; color: var(--text-dim); line-height: 1.7; }
+    .mw-desc strong { color: var(--white); }
+    .mw-steps { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+    .mw-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      background: rgba(79,142,247,0.05);
+      border: 1px solid rgba(79,142,247,0.12);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+    .mw-step strong { color: var(--white); }
+    .mw-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--blue);
+      background: rgba(79,142,247,0.1);
+      border: 1px solid rgba(79,142,247,0.25);
+      border-radius: 4px;
+      padding: 2px 8px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+    .mw-btn {
+      margin-top: 4px;
+      padding: 10px 24px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .mw-btn:hover { border-color: var(--blue); color: var(--blue); }
+  </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- MOBILE WARNING -->
+  <div id="mobile-warning">
+    <div class="mw-card">
+      <div class="mw-icon">💻</div>
+      <h2 class="mw-title">Mejor experiencia en escritorio</h2>
+      <p class="mw-desc">Esta página está diseñada para verse en un ordenador. Para disfrutarla al máximo, te recomendamos activar el <strong>modo escritorio</strong> en tu navegador.</p>
+      <div class="mw-steps">
+        <div class="mw-step">
+          <span class="mw-badge">Chrome</span>
+          <span>Toca los <strong>3 puntos</strong> (⋮) arriba a la derecha → <strong>"Sitio web para PC"</strong></span>
+        </div>
+        <div class="mw-step">
+          <span class="mw-badge">Safari</span>
+          <span>Toca <strong>"aA"</span> en la barra de dirección → <strong>"Sitio web para ordenador"</strong></span>
+        </div>
+        <div class="mw-step">
+          <span class="mw-badge">Firefox</span>
+          <span>Toca los <strong>3 puntos</strong> (⋮) → <strong>"Versión de escritorio"</strong></span>
+        </div>
+      </div>
+      <button class="mw-btn" id="mw-continue">Continuar de todas formas</button>
+    </div>
+  </div>
 
   <!-- NAV -->
   <nav>
@@ -162,7 +255,7 @@
           </div>
         </div>
         <div class="graph-x">
-          <span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span>
+          <span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
         </div>
       </div>
       <div class="timeline">
@@ -209,8 +302,8 @@
                 <div class="t-item">
           <div class="t-year">2026</div>
           <div class="t-content">
-            <h3>Consolidación y crecimiento</h3>
-            <p>Unificando todo lo aprendido. Tres nuevos lenguajes aprendidos,  C/ C++ / C#. Mi mejor epoca como programador. Actualmente estoy volviendo a la programación con LUA, para ponerme al dia con todo lo relacionado con este lenguanje.El resto de lenguajes los uso de vez en cuando depende de el proyecto que quiera realizar</p>
+            <h3>De vuelta con LUA</h3>
+            <p>Actualmente estoy volviendo a la programación con LUA, para ponerme al dia con todo lo relacionado con este lenguanje.El resto de lenguajes los uso de vez en cuando depende de el proyecto que quiera realizar</p>
             <div class="t-tags"><span>LUA</span><span>HTML</span><span>Phyton</span><span>Java</span></div>
           </div>
         </div>
@@ -225,5 +318,21 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // ===== MOBILE WARNING =====
+    (function () {
+      const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent)
+        || (navigator.maxTouchPoints > 1 && window.innerWidth <= 900);
+      if (isMobile) {
+        const overlay = document.getElementById('mobile-warning');
+        overlay.classList.add('show');
+        document.getElementById('mw-continue').addEventListener('click', function () {
+          overlay.style.opacity = '0';
+          overlay.style.transition = 'opacity 0.3s';
+          setTimeout(function() { overlay.remove(); }, 300);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

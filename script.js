@@ -31,6 +31,7 @@ const chartData = [
   { year: '2023', value: 50 },
   { year: '2024', value: 70 },
   { year: '2025', value: 88 },
+  { year: '2026', value: 100 },
 ];
 
 function buildChart() {
